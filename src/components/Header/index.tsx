@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import logo from '../../assets/logo.svg'
 import { SignInButton } from '../SignInButton'
+import { ActiveLink } from '../ActiveLink'
 import styles from './styles.module.scss'
 
 export function Header(): JSX.Element {
@@ -10,8 +11,12 @@ export function Header(): JSX.Element {
         <Image src={logo} alt="ig.news" />
 
         <nav>
-          <a className={styles.active}>Home</a>
-          <a>Posts</a>
+          <ActiveLink activeClassName={styles.active} href="/">
+            <a>Home</a>
+          </ActiveLink>
+          <ActiveLink activeClassName={styles.active} href="/posts">
+            <a>Posts</a>
+          </ActiveLink>
         </nav>
 
         <SignInButton />
