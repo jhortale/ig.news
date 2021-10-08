@@ -8,7 +8,7 @@ export function Header(): JSX.Element {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <Image src={logo} alt="ig.news" />
+        <Image src={logo} alt="ig.news" width="100%" height="100%" />
 
         <nav>
           <ActiveLink activeClassName={styles.active} href="/">
