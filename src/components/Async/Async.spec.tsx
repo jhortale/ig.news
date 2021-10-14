@@ -1,17 +1,15 @@
-import {
-  render,
-  screen,
-  fireEvent,
-  waitFor,
-  waitForElementToBeRemoved
-} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { Async } from '.'
 
 test('Should show dialog when click toggle button', async () => {
   render(<Async />)
 
+  screen.logTestingPlaygroundURL()
+
   const button = screen.getByText('Toggle')
 
+  const dialog = await screen.findByText('Dialog')
+
   expect(button).toBeInTheDocument()
-  expect(await screen.findByText('Dialog')).toBeInTheDocument()
+  expect(dialog).toBeInTheDocument()
 })
