@@ -20,9 +20,11 @@ jest.mock('next-auth/client', () => {
 })
 
 jest.mock('next/image', () => ({
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   __esModule: true,
+  // eslint-disable-next-line jsx-a11y/alt-text
+  // eslint-disable-next-line react/display-name
   default: (props: any) => {
+    // eslint-disable-next-line @next/next/no-img-element
     // eslint-disable-next-line jsx-a11y/alt-text
     return <img {...props} />
   }

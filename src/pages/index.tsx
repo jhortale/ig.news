@@ -9,7 +9,7 @@ import styles from './home.module.scss'
 interface HomeProps {
   product: {
     priceId: string
-    amount: number
+    amount: string
   }
 }
 export default function Home({ product }: HomeProps): JSX.Element {
@@ -32,7 +32,7 @@ export default function Home({ product }: HomeProps): JSX.Element {
             <span>for {product.amount} month</span>
           </p>
 
-          <SubscribeButton priceId={product.priceId} />
+          <SubscribeButton />
         </section>
         <Image src={avatar} alt="Girl Coding" />
       </main>
